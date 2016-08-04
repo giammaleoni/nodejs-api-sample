@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-api-sample",
+  "version": "1.0.0",
+  "description": "An example of making a Node.js API server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nodejs-api-sample"
+  },
+  "keywords": [
+    "nodejs",
+    "api",
+    "express"
+  ],
+  "author": "Gianmaria Leoni",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
