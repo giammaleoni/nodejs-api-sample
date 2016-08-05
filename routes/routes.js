@@ -1,11 +1,7 @@
 var appRouter = function(app) {
 
-  var arrayList = [
-    {id: 1, name: "primo"},
-    {id: 2, name: "secondo"}
-  ];
-
-  arrayList = require('../db.json');
+  users = require('../db_users.json');
+  houses = require('../db_houses.json');
 
   //GET hello world http://localhost:3000
   app.get("/", function(req, res) {
@@ -40,7 +36,22 @@ var appRouter = function(app) {
 
   app.get('/user/:id', function (req, res) {
     console.log(req.params); //parametri dopo lo slash
-    res.send(arrayList[req.params.id - 1]);
+    res.send(users[req.params.id - 1]);
+  });
+
+  // GET esempio get all users
+  app.get('/users', function (req, res) {
+    res.send(users);
+  });
+
+  //GET esempio get all houses
+  app.get('/houses', function (req, res) {
+    res.send(houses);
+  });
+
+  app.get('/house/:id', function (req, res) {
+    console.log(req.params); //parametri dopo lo slash
+    res.send(houses[req.params.id - 1]);
   });
 
   // POST example (usare postman e inserire tutti e tre i parametri nella chiamata)
